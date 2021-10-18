@@ -2,13 +2,13 @@ import Foundation
 
 extension String {
     
-    var clearNumber: String {
+    var cleanNumber: String {
         
-        let clearNumber = self.replacingOccurrences(of: "-", with: "")
+        let cleanNumber = self.replacingOccurrences(of: "-", with: "")
             .replacingOccurrences(of: "(", with: "")
             .replacingOccurrences(of: ")", with: "")
             .replacingOccurrences(of: " ", with: "")
-        return clearNumber
+        return cleanNumber
     }
     
 }

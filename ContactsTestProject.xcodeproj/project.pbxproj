@@ -100,8 +100,8 @@
 		11E74D4E271D1811004DBBF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				11E74D49271D0301004DBBF4 /* PhoneContactsFetch.swift */,
 				111E99BD271D3E0D007044B6 /* PhoneContactsModel.swift */,
+				11E74D49271D0301004DBBF4 /* PhoneContactsFetch.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

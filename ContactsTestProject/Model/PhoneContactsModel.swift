@@ -26,7 +26,7 @@ class PhoneContactsModel {
             
             for phoneNumber in contact.phoneNumbers {
                 
-                phoneNumbers.append(phoneNumber.value.stringValue.clearNumber)
+                phoneNumbers.append(phoneNumber.value.stringValue.cleanNumber)
 
             }
             
