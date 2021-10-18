@@ -1,10 +1,10 @@
 import Foundation
 import Contacts
 
-class PhoneContacts {
+class PhoneContactsFetch {
     
-    static let shared: PhoneContacts = {
-        let instance = PhoneContacts()
+    static let shared: PhoneContactsFetch = {
+        let instance = PhoneContactsFetch()
         return instance
     }()
     

@@ -5,21 +5,26 @@ class ContactsViewController: UIViewController {
     
     @IBOutlet weak var contactsTable: UITableView!
     
-    var contacts: [CNContact] = []
+    var contacts: [PhoneContactsModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         contactsTable.delegate = self
         contactsTable.dataSource = self
-        contacts = PhoneContacts.shared.getContacts()
+        fetchContacts()
+        
     }
     
-    func call(contact: CNContact) {
+    func fetchContacts() {
+        for contact in PhoneContactsFetch.shared.getContacts() {
+            contacts.append(PhoneContactsModel.init(contact: contact))
+        }
+    }
+    
+    func call(data: PhoneContactsModel) {
         
-        let number = contact.phoneNumbers.first?.value
-        
-        let stringNumber = number?.stringValue.clearNumber ?? ""
+        let stringNumber = data.phoneNumbers.first ?? ""
         
         if let phoneCallURL = URL(string: "telprompt://\(stringNumber)") {
             
@@ -28,9 +33,7 @@ class ContactsViewController: UIViewController {
                 if #available(iOS 10.0, *) {
                     application.open(phoneCallURL, options: [:], completionHandler: nil)
                 } else {
-                    
                     application.openURL(phoneCallURL as URL)
-                    
                 }
             }
             
@@ -55,7 +58,7 @@ extension ContactsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.call(contact: contacts[indexPath.row])
+        self.call(data: contacts[indexPath.row])
         
     }
     
