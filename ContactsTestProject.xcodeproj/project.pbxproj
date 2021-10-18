@@ -45,6 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117A65CA271D192F0055022F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				11E74D30271CFE7A004DBBF4 /* SceneDelegate.swift */,
+				11E74D2E271CFE7A004DBBF4 /* AppDelegate.swift */,
+				11E74D3A271CFE7E004DBBF4 /* Assets.xcassets */,
+				11E74D3C271CFE7E004DBBF4 /* LaunchScreen.storyboard */,
+				11E74D3F271CFE7E004DBBF4 /* Info.plist */,
+				11E74D37271CFE7A004DBBF4 /* ContactsTestProject.xcdatamodeld */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		11E74D22271CFE7A004DBBF4 = {
 			isa = PBXGroup;
 			children = (
@@ -69,12 +82,7 @@
 				11E74D51271D1840004DBBF4 /* View */,
 				11E74D4D271D1806004DBBF4 /* Controllers */,
 				11E74D4F271D181C004DBBF4 /* Cells */,
-				11E74D30271CFE7A004DBBF4 /* SceneDelegate.swift */,
-				11E74D2E271CFE7A004DBBF4 /* AppDelegate.swift */,
-				11E74D3A271CFE7E004DBBF4 /* Assets.xcassets */,
-				11E74D3C271CFE7E004DBBF4 /* LaunchScreen.storyboard */,
-				11E74D3F271CFE7E004DBBF4 /* Info.plist */,
-				11E74D37271CFE7A004DBBF4 /* ContactsTestProject.xcdatamodeld */,
+				117A65CA271D192F0055022F /* Supporting files */,
 			);
 			path = ContactsTestProject;
 			sourceTree = "<group>";
