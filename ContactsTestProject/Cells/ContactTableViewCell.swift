@@ -1,5 +1,4 @@
 import UIKit
-import Contacts
 
 class ContactTableViewCell: UITableViewCell {
     
